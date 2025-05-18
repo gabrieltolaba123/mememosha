@@ -1,0 +1,494 @@
+body {
+    background-color: #ffd1dc; /* Rosa cálido */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+h1 {
+    color: #d23369;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 3em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.2;
+    animation: fadeIn 2s ease-in-out;
+
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    background-color: rgba(138, 13, 86, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif; 
+    display: inline-block;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    margin: 20px auto;
+    max-width: 600px;   
+    line-height: 1.2;
+    animation: fadeIn 2s ease-in-out;
+
+}
+
+/* Corazones animados */
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d23369"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Flores */
+.flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+.tulip {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FF4081" d="M50 15C40 5 25 10 25 25c0 15 25 40 25 40s25-25 25-40c0-15-15-20-25-10z"/><path fill="%234CAF50" d="M45 65L50 85 55 65z"/></svg>');
+}
+
+.rose {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23E91E63" d="M50 20c10-15 30-10 30 5 0 15-20 30-30 45S20 40 20 25c0-15 20-20 30-5z"/><path fill="%234CAF50" d="M45 70L50 90 55 70z"/></svg>');
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+.textoamor {
+    background: url('https://img.freepik.com/free-vector/vintage-paper-texture_1194-6506.jpg') center/cover;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 20px auto;
+    position: relative;
+    border: 1px solid #e0c9a6;
+}
+
+.textoamor:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.textoamor {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #96bed8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    font-family: 'Playfair Display', cursive;
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffd1dc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d23369;
+    border-radius: 10px;
+    border: 3px solid #ffd1dc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a82a54;
+}
+/* AÑADE ESTO AL FINAL DE TU CSS EXISTENTE */
+
+.invitation {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#si-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#no-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.heart-animation {
+    font-size: 50px;
+    margin-top: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Animales animados */
+.animals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.animal {
+    position: absolute;
+    font-size: 40px;
+    animation: float 8s ease-in-out infinite;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+    user-select: none;
+}
+
+/* Animación personalizada para cada animal */
+.chanchito {
+    animation: float 6s ease-in-out infinite, pulse 2s infinite;
+    color: #ffb6c1;
+}
+
+.tortuguita {
+    animation: floatSlow 12s linear infinite;
+    color: #8fbc8f;
+}
+
+.capybara {
+    animation: float 7s ease-in-out infinite, rotateSlow 20s linear infinite;
+    color: #a0522d;
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(10px) translateX(-10px); }
+    75% { transform: translateY(-15px) translateX(5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* CARTA ROSA INTERACTIVA */
+.carta-rosa-container {
+    max-width: 600px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.carta-rosa {
+    background: linear-gradient(145deg, #ffb6c1, #ff69b4);
+    border-radius: 10px;
+    padding: 0;
+    cursor: pointer;
+    transform: scaleY(0.3);
+    height: 120px;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    box-shadow: 0 15px 35px rgba(255,105,180,0.3);
+    position: relative;
+    border: 2px solid #fff;
+}
+
+.carta-rosa.abierta {
+    transform: scaleY(1);
+    height: auto;
+    min-height: 500px;
+    cursor: default;
+}
+
+.sello-corazon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ff1493;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.carta-rosa.abierta .sello-corazon {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* PÉTALOS CAYENDO */
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.petal {
+    position: absolute;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* ÁLBUM DE FOTOS */
+#album-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.album-content {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.album-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.album-img:hover {
+    transform: scale(1.05);
+}
+
+/* MÚSICA */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+/* Permite interactuar con los elementos dentro de la carta abierta */
+.carta-rosa.abierta {
+    pointer-events: auto; /* Permite clicks en los botones internos */
+}
+
+.carta-rosa.abierta .sello-corazon {
+    pointer-events: none; /* El sello sigue sin ser clickeable */
+}
+
+/* Mejora visual para indicar que la carta ya está abierta */
+.carta-rosa.abierta {
+    cursor: default;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+}
+
+/* Pétalos cayendo */
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.petal {
+    position: absolute;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Álbum de fotos */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.album-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.album-img:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de música */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
